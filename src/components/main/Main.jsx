@@ -23,8 +23,8 @@ export default function Main(){
   localStorage.setItem('lata', lataGrande)
 
   useEffect(()=>{ 
-
-    if(corFund === 'null'){
+    let valor = 'null';
+    if(corFund === valor){
         setlataGrande(PepsiBlue);
         setBackCor('blue');
     };
