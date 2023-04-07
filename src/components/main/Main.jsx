@@ -21,19 +21,21 @@ export default function Main(){
   
   localStorage.setItem('cor', backCor)
   localStorage.setItem('lata', lataGrande)
-
-  useEffect(()=>{ 
+  
+  useEffect(()=>{
     let valor = 'null';
     if(corFund === valor){
         setlataGrande(PepsiBlue);
         setBackCor('blue');
-    }else{
+    }
+  })
+
+  useEffect(()=>{ 
+
       setCor(corFund)
       setLt(lataGra)
       document.querySelector('body').style.backgroundColor = backCor;
-    }
- 
-  })
+  },[backCor, cor])
 
   return (
     <Mains>
