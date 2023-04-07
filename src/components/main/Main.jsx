@@ -19,6 +19,8 @@ export default function Main(){
   localStorage.setItem('cor', backCor)
   localStorage.setItem('lata', lataGrande)
 
+
+
   useEffect(()=>{ 
     console.log('useEffect')
     let valor = 'null';
@@ -28,7 +30,9 @@ export default function Main(){
     }
      
       document.querySelector('body').style.backgroundColor = backCor;
-  },[backCor])
+  })
+
+ 
 
   return (
     <Mains>
