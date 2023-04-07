@@ -15,23 +15,20 @@ export default function Main(){
 
   const [lataGrande, setlataGrande] = useState(lataGra)
   const [backCor, setBackCor] = useState(corFund)
-  const [cor, setCor] = useState(backCor)
 
-  
   localStorage.setItem('cor', backCor)
   localStorage.setItem('lata', lataGrande)
 
-  
-
   useEffect(()=>{ 
+    console.log('useEffect')
     let valor = 'null';
     if(corFund === valor){
         setlataGrande(PepsiBlue);
         setBackCor('blue');
     }
-      setCor(corFund)
+     
       document.querySelector('body').style.backgroundColor = backCor;
-  },[backCor, cor])
+  },[backCor])
 
   return (
     <Mains>
