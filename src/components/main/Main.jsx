@@ -27,11 +27,12 @@ export default function Main(){
     if(corFund === valor){
         setlataGrande(PepsiBlue);
         setBackCor('blue');
-    };
+    }else{
+      setCor(corFund)
+      setLt(lataGra)
+      document.querySelector('body').style.backgroundColor = backCor;
+    }
  
-    setCor(corFund)
-    setLt(lataGra)
-    document.querySelector('body').style.backgroundColor = backCor;
   },[backCor,cor])
 
   return (
