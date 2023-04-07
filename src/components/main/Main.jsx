@@ -33,7 +33,7 @@ export default function Main(){
       document.querySelector('body').style.backgroundColor = backCor;
     }
  
-  },[backCor,cor])
+  })
 
   return (
     <Mains>
