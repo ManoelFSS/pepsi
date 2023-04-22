@@ -13,24 +13,24 @@ export default function Main(){
   const corFund = localStorage.getItem('cor')
   const lataGra = localStorage.getItem('lata')
 
-  const [lataGrande, setlataGrande] = useState(lataGra)
-  const [backCor, setBackCor] = useState(corFund)
+  const [lataGrande, setlataGrande] = useState(PepsiBlue)
+  const [backCor, setBackCor] = useState('blue')
 
   localStorage.setItem('cor', backCor)
   localStorage.setItem('lata', lataGrande)
 
-  window.addEventListener('load', function() {
-      
-    let valor = 'null';
-    if(corFund === valor){
-        setlataGrande(PepsiBlue);
-        setBackCor('blue');
-    }
-    
-  });
+
+
+    //window.addEventListener('load', function() {
+     // setlataGrande(PepsiBlue);
+   //   setBackCor('blue');
+   // });
+
+  
+ 
 
   useEffect(()=>{ 
-     
+    
       document.querySelector('body').style.backgroundColor = backCor;
   })
 
