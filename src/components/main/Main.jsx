@@ -19,15 +19,17 @@ export default function Main(){
   localStorage.setItem('cor', backCor)
   localStorage.setItem('lata', lataGrande)
 
-
-
-  useEffect(()=>{ 
-    console.log('useEffect')
+  window.addEventListener('load', function() {
+      
     let valor = 'null';
     if(corFund === valor){
         setlataGrande(PepsiBlue);
         setBackCor('blue');
     }
+    
+  });
+
+  useEffect(()=>{ 
      
       document.querySelector('body').style.backgroundColor = backCor;
   })
